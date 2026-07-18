@@ -80,6 +80,18 @@ flowchart LR
 各工程を作り込むことより、意図から完成まで状態が途切れず、前工程へ戻っても最新の主張と
 原稿の対応を見失わないことを優先する。
 
+実装は機能別ではなく、完了時に一段の体験が通る次のIssueで進める。
+
+1. [M0: App Server接続と記事状態モデル](https://github.com/maguroid/inkduet/issues/12)
+2. [M1: 伝えたいことからストーリー承認](https://github.com/maguroid/inkduet/issues/13)
+3. [M2: 承認済みストーリーから初稿生成](https://github.com/maguroid/inkduet/issues/14)
+4. [M3: 対象選択・複数案比較・採用](https://github.com/maguroid/inkduet/issues/15)
+5. [M4: 差分・影響範囲の確認と完成宣言](https://github.com/maguroid/inkduet/issues/16)
+6. [M5: サンプル記事での完走と価値評価](https://github.com/maguroid/inkduet/issues/17)
+
+課題・機能仮説を表す`BL-*` Issueは、各M Issueから参照する。BL Issue自体を実装進行の
+単位にせず、Dev BoardにはM Issueだけを載せる。
+
 ## 実現方式
 
 記事制作の知識は一つの`article-writing-core` Skillへ分離し、アプリへ同梱してバージョンを
@@ -132,5 +144,6 @@ Skill自身はフェーズを進めず、アプリも記事制作の判断基準
   プロダクト全体とする案から、「伝えたいこと」を起点に記事として完成するまでを完結させる
   記事作成ハーネスへ変更した。理由は、完結させたい仕事が修正単体ではなく記事制作全体だからである。
 - [編集工程の現行プロセスと課題定義](./editorial-workflow.md)
-- [実装バックログ（GitHub Issues）](https://github.com/maguroid/inkduet/issues)
+- [課題・機能仮説（BL Issues）](https://github.com/maguroid/inkduet/issues?q=is%3Aissue%20state%3Aopen%20label%3Akind%3Ahypothesis)
+- [MVP実装単位（M Issues）](https://github.com/maguroid/inkduet/issues?q=is%3Aissue%20state%3Aopen%20label%3Akind%3Adelivery)
 - [App Serverの技術設計](./app-server-architecture.md)

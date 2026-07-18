@@ -7,9 +7,11 @@
 AIを使った現在の記事作成プロセスと、各工程で発生している課題を対応付ける。課題は、
 今後どの機能から開発するかを判断できるよう、優先順位の背景とともに定義する。
 
-実装バックログと進行状態の正本は
-[GitHub Issues](https://github.com/maguroid/inkduet/issues) と
-[GitHub Project「Dev Board」](https://github.com/users/maguroid/projects/5) とする。
+課題・機能仮説の正本は
+[BL Issues](https://github.com/maguroid/inkduet/issues?q=is%3Aissue%20state%3Aopen%20label%3Akind%3Ahypothesis)、
+実装・検証単位の正本は
+[M Issues](https://github.com/maguroid/inkduet/issues?q=is%3Aissue%20state%3Aopen%20label%3Akind%3Adelivery)、
+実装の進行状態は[GitHub Project「Dev Board」](https://github.com/users/maguroid/projects/5)とする。
 
 この文書は記事作成ハーネス全体の企画ではなく、**初稿以降のレビュー・修正・完成判断を担う
 編集サブシステム**の設計資料である。プロダクト全体は「伝えたいこと」からストーリーを設計し、
@@ -158,8 +160,12 @@ PR-01 読者の想定
 - `P2`: [BL-10 #10](https://github.com/maguroid/inkduet/issues/10)、
   [BL-11 #11](https://github.com/maguroid/inkduet/issues/11)
 
-達成したい状態、関連工程、対応する課題、機能仮説は各Issue本文で管理し、進行状態は
-Dev Boardで管理する。この文書へ状態や実装詳細を複製しない。
+達成したい状態、関連工程、対応する課題、機能仮説は各BL Issue本文で管理する。BL Issueは
+実装項目ではなく、優先度も「解く価値」の優先度を表すため、Dev Boardには載せない。
+
+実装は、複数のBL Issueを横断して一段のユーザー体験を通す
+[M0〜M5](https://github.com/maguroid/inkduet/issues?q=is%3Aissue%20state%3Aopen%20label%3Akind%3Adelivery)
+で進め、M IssueだけをDev Boardで管理する。この文書へ進行状態や実装詳細を複製しない。
 
 ### 優先順位の判断理由
 
