@@ -82,12 +82,13 @@ flowchart LR
 
 実装は機能別ではなく、完了時に一段の体験が通る次のIssueで進める。
 
-1. [M0: App Server接続と記事状態モデル](https://github.com/maguroid/inkduet/issues/12)
-2. [M1: 伝えたいことからストーリー承認](https://github.com/maguroid/inkduet/issues/13)
-3. [M2: 承認済みストーリーから初稿生成](https://github.com/maguroid/inkduet/issues/14)
-4. [M3: 対象選択・複数案比較・採用](https://github.com/maguroid/inkduet/issues/15)
-5. [M4: 差分・影響範囲の確認と完成宣言](https://github.com/maguroid/inkduet/issues/16)
-6. [M5: サンプル記事での完走と価値評価](https://github.com/maguroid/inkduet/issues/17)
+1. [M0a: アプリ全体のUXプロトタイプ](https://github.com/maguroid/inkduet/issues/12)
+2. [M0b: App Server接続と記事状態モデル](https://github.com/maguroid/inkduet/issues/18)
+3. [M1: 伝えたいことからストーリー承認](https://github.com/maguroid/inkduet/issues/13)
+4. [M2: 承認済みストーリーから初稿生成](https://github.com/maguroid/inkduet/issues/14)
+5. [M3: 対象選択・複数案比較・採用](https://github.com/maguroid/inkduet/issues/15)
+6. [M4: 差分・影響範囲の確認と完成宣言](https://github.com/maguroid/inkduet/issues/16)
+7. [M5: サンプル記事での完走と価値評価](https://github.com/maguroid/inkduet/issues/17)
 
 課題・機能仮説を表す`BL-*` Issueは、各M Issueから参照する。BL Issue自体を実装進行の
 単位にせず、Dev BoardにはM Issueだけを載せる。
@@ -132,6 +133,12 @@ Skill自身はフェーズを進めず、アプリも記事制作の判断基準
 
 ## 判断履歴と関連資料
 
+- **2026-07-18 ユーザー判断**: App Server接続と状態モデルの実装より先に、サンプルデータで
+  記事制作全体を操作できるクリック可能なUXプロトタイプを作る。Before: 技術基盤をM0とし、
+  画面と操作は各縦断Issueで順に実装する。After: M0aで全体フロー、情報設計、中心編集ループ、
+  承認点を確定し、M0bで採用したUXから状態モデルと入出力を逆算する。専用アプリの最大の
+  不確実性はApp Server接続ではなく、比較・選択・承認をチャットより少ない負担で行えるかに
+  あるため。配色や細かな造形はこの段階では固定しない。
 - **2026-07-18 ユーザー判断**: プロジェクト名を`inkduet`に決定した。Before: 執筆感を
   前面に出す`tsuzuru`や、人間を一本目・AIを二本目のペンと捉える`secondpen`などを検討した。
   After: 人とAIが二人で一つの記事を仕上げる関係を、共同演奏として表す`inkduet`を採用した。
