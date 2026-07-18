@@ -131,5 +131,6 @@ Skill自身はフェーズを進めず、アプリも記事制作の判断基準
 - **2026-07-18 ユーザー指摘/判断**: 修正は重要だが、修正だけに特化しない。修正IDEを
   プロダクト全体とする案から、「伝えたいこと」を起点に記事として完成するまでを完結させる
   記事作成ハーネスへ変更した。理由は、完結させたい仕事が修正単体ではなく記事制作全体だからである。
-- [編集工程の課題と機能バックログ](./editorial-workflow.md)
+- [編集工程の現行プロセスと課題定義](./editorial-workflow.md)
+- [実装バックログ（GitHub Issues）](https://github.com/maguroid/inkduet/issues)
 - [App Serverの技術設計](./app-server-architecture.md)
